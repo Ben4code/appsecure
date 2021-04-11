@@ -1,0 +1,32 @@
+.navbar{
+  background: $primary;
+  
+  & a {
+    color: $white;
+  }
+
+  .logo{
+    font-size: 2.6rem;
+  }
+
+  .active{
+    border-bottom: .2rem solid $white;
+  }
+
+  .nav-list{
+    padding: 2rem 15rem;
+    display: flex;
+    color: $white;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-group{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .nav-item{
+    margin-right: 4.5rem;
+  }
+}

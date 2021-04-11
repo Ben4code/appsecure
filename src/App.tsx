@@ -1,25 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, useContext } from 'react';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+import './scss/main.scss'
+
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Pretexting from './pages/Pretexting'
+import ExperienceBank from './pages/ExperienceBank'
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
+import { auth } from './firebaseConfig';
+import { AuthContext } from './Context/AuthContext'
 
 function App() {
+
+  const [loading, setLoading] = useState(true)
+  const { dispatch } = useContext(AuthContext)
+
+  useEffect(() => {
+    auth.onAuthStateChanged(user => {
+      if (user) {
+        dispatch({
+          type: 'FETCH_AUTH_USER',
+          payload: true
+        })
+      }
+      else {        
+        dispatch({
+          type: 'FETCH_AUTH_USER',
+          payload: false
+        })
+      }
+      setLoading(false)
+    })
+    // eslint-disable-next-line
+  }, []) 
+
+  if (loading) {
+    return <h1>Loading...</h1>
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <div className="container">
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route exact path='/about' component={About} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/pretexting' component={Pretexting} />
+            <Route exact path='/experience-bank' component={ExperienceBank} />
+            <Route exact path='/signup' component={SignUp} />
+            <Route exact path='/login' component={Login} />
+          </Switch>
+        </div>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 

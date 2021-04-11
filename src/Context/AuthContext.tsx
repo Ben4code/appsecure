@@ -24,7 +24,7 @@ const initialState: IState = {
   news: [],
   quotes: [
     {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 1'
+      text: 'Hello world consectetur adipisicing elit. Assumenda, facere.'
     },
     {
       text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 2'

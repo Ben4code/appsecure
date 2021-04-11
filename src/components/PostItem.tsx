@@ -16,7 +16,7 @@ export default function Post({post, handleLike}: {
       <div className="postItem">
         <h4> <Link to='/'> {post.title} </Link></h4>
         <small><span style={{fontStyle: 'italic', 'color': 'gray', 'fontSize': '1.3rem'}}>By: {post.author} | 
-         Posted: {formatDistance(subDays(new Date(post.createdAt.seconds * 1000), 1), new Date(), { addSuffix: true }) } 
+         Posted: {formatDistance(subDays(new Date(post.createdAt.seconds * 1000), .01), new Date(), { addSuffix: true }) } 
         </span></small>
         <p>{post.content}</p>
         <small onClick={() => handleLike(post.id, post.likes)}><span style={{'color': 'gray', cursor:'pointer'}}> <FaThumbsUp color='#3db6eb'/> {post.likes}  </span></small>

@@ -19,7 +19,7 @@ export default function Sidebar() {
       }
       console.log(newsRespose)
     }
-    getNews();
+    // getNews();
     
     // eslint-disable-next-line
   }, [])

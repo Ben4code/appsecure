@@ -18,7 +18,12 @@ export function SignInWithGoogle() {
   
   return (
     <button className="btn btn-google" onClick={signInWithGoogle}>
-      <img width="30" height="30" src={`/google.png`} alt="Google logo"/>
+      <div style={{display: 'flex', alignItems: 'center'}}>
+        <span style={{marginRight: '1rem'}}>
+          Sign In with Google 
+        </span>  
+        <img width="30" height="30" src={`/google.png`} alt="Google logo"/>
+      </div>
     </button>
   )
 }

@@ -10,6 +10,7 @@ import AddPost from '../components/AddPost'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {v4 as UUID} from 'uuid'
+import { Redirect } from 'react-router'
 
 toast.configure();
 
@@ -52,19 +53,19 @@ export default function ExperienceBank() {
 
   const ref = firestore.collection('posts')
   
-  const query = ref.orderBy('createdAt').limit(30)
+  const query = ref.orderBy('createdAt', 'desc').limit(30)
   const [querySnapshot] = useCollection(query)
   const postsArray = querySnapshot?.docs.map(doc=> ({
     ...doc.data(),
     id: doc.id
   })) as Post[] | undefined
 
-  if(!postsArray){
-    return <p>Loading...</p>
+
+  if(!auth.currentUser){
+    return <Redirect to='/login' />
   }
 
   const getPosts = (postsArray: Post[]): PostItemProps[] => {
-    console.log(postsArray)
     return postsArray.map((postItem) => {
       return {
         id: postItem.id,
@@ -86,7 +87,7 @@ export default function ExperienceBank() {
         userIds: [],
         likesCount: 0
       },
-      createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+      createdAt: firebase.firestore.Timestamp,
       id: UUID()
     }
     
@@ -130,7 +131,7 @@ export default function ExperienceBank() {
           <br/><br/>
           <AddPost handlePost={handlePost} />
           <br/><hr style={{background: '#3db6eb'}} /><br/>
-          {getPosts(postsArray).map((post: PostItemProps, index) => <PostItem key={index} post={post} handleLike={handleLike}/>)}
+          {!postsArray ? (<p>Loading...</p>) : getPosts(postsArray).map((post: PostItemProps, index) => <PostItem key={index} post={post} handleLike={handleLike}/>)}
         </div>
         <Sidebar />
       </div>

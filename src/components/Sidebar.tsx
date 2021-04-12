@@ -42,7 +42,7 @@ export default function Sidebar() {
             <div key={newsItem.title} className="sidebar__item">
               <h5>{newsItem.title}</h5>
               <Link to={newsItem.url}>
-                <p>{newsItem.description.slice(0, 200) + '...'}</p>
+                <p>{newsItem.description.slice(0, 65) + '...'}</p>
               </Link>
             </div>
           ))

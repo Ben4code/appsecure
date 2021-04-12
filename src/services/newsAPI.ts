@@ -12,6 +12,6 @@ export interface NewsItem {
 }
 
 export const fetchNewsApi = async (): Promise<NewsResponse> => {
-  const res = await fetch(`https://newsapi.org/v2/everything?q=cyber%20security&sortBy=popularity&pageSize=15&apiKey=${process.env.REACT_APP_NEWSAPI_KEY}`)
+  const res = await fetch(`https://newsapi.org/v2/everything?q=cyber%20security&sortBy=popularity&pageSize=10&apiKey=${process.env.REACT_APP_NEWSAPI_KEY}`)
   return res.json()
 }

@@ -7,6 +7,7 @@
 
 // Layout Styles
 @import "./layouts/home.scss";
+@import "./layouts/header.scss";
 @import "./layouts/experience.scss";
 @import "./layouts/form.scss";
 @import "./layouts/sidebar.scss";
@@ -82,6 +83,30 @@ h3{
   }
 }
 
+.btn-danger{
+  background: $secondary;
+  color: $white;
+  border-radius: 3rem;
+  border: none;
+  padding: 1rem 4rem;
+  font-weight: 700;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: all .15s ease-in;
+  box-shadow: 8px 8px 16px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 2px 0 rgba(255, 255, 255, 0.3);
+  
+  &:hover{
+    background-color: $secondary_2;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.25),
+    -2px -2px 2px 0 rgba(255, 255, 255, 0.3);
+  
+  }
+}
+
+
 .btn-google{
   background: #EA4235;
   color: $white;
@@ -120,3 +145,4 @@ h3{
   }
   
 }
+

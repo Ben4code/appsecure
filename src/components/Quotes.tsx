@@ -20,7 +20,7 @@ export default function Quotes() {
     setTimeout(() => {
       setactiveQuotes(quotes[counter])
       setCounter(counter + 1)
-    }, 3000)
+    }, 2850)
   }
 
   useEffect(() => {
@@ -33,6 +33,7 @@ export default function Quotes() {
         <div>
           <h3>Security Quotes of Today</h3>
           <p>{activeQuotes.text}</p>
+          <small style={{fontStyle: 'italic', 'color': 'gray', 'fontSize': '1.3rem'}}><span> - {activeQuotes.author}</span></small>
         </div>
       </div>
     </div>

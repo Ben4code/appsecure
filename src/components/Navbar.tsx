@@ -40,18 +40,18 @@ export default function Navbar() {
               About
             </NavLink>
           </li>
-          <li className="navbar nav-item">
+          {/* <li className="navbar nav-item">
             <NavLink to="/contact" exact className="nav-link">
               Contact
             </NavLink>
-          </li>
+          </li> */}
 
           {
             auth.currentUser && state.isAuthUser ?
               (
                 <>
                   <li className="navbar nav-item">
-                    <NavLink to="/experience-bank" exact className="nav-link">
+                    <NavLink to="/experience-bank" exact className="nav-link bordered">
                       Experience bank
                     </NavLink>
                   </li>

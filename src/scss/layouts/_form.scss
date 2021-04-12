@@ -1,6 +1,7 @@
 .signup{
   flex-direction: column;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
@@ -8,6 +9,7 @@
 .form{
   display: flex;
   width: 40%;
+  flex-wrap: wrap;
   margin-bottom: 1rem;
   justify-content: center;
   flex-direction: column;

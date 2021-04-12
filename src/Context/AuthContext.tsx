@@ -1,9 +1,11 @@
 import React, {createContext, useReducer} from 'react'
 import firebase from 'firebase'
 import {NewsItem} from '../services/newsAPI'
+import { allQuotes } from '../quotes'
 
 export interface Quote {
   text: string
+  author: string
 }
 
 interface IAction {
@@ -22,26 +24,7 @@ const initialState: IState = {
   isAuthUser: false,
   user: null,
   news: [],
-  quotes: [
-    {
-      text: 'Hello world consectetur adipisicing elit. Assumenda, facere.'
-    },
-    {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 2'
-    },
-    {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 3'
-    },
-    {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 4'
-    },
-    {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 5'
-    },
-    {
-      text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, facere. Vel, ipsam labore! In officia inventore labore modi qui ad 6'
-    }
-  ]
+  quotes: [...allQuotes]
 }
 
 export const AuthContext = createContext<IState | any>(initialState)

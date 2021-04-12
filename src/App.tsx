@@ -27,7 +27,7 @@ function App() {
           payload: true
         })
       }
-      else {        
+      else {
         dispatch({
           type: 'FETCH_AUTH_USER',
           payload: false
@@ -36,7 +36,7 @@ function App() {
       setLoading(false)
     })
     // eslint-disable-next-line
-  }, []) 
+  }, [])
 
   if (loading) {
     return <h1>Loading...</h1>
@@ -46,17 +46,17 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <div className="container">
-          <Switch>
-            <Route exact path='/' component={Home} />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <div className="container">
             <Route exact path='/about' component={About} />
             <Route exact path='/contact' component={Contact} />
             <Route exact path='/pretexting' component={Pretexting} />
             <Route exact path='/experience-bank' component={ExperienceBank} />
             <Route exact path='/signup' component={SignUp} />
             <Route exact path='/login' component={Login} />
-          </Switch>
-        </div>
+          </div>
+        </Switch>
       </div>
       <Footer />
     </Router>

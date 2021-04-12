@@ -12,7 +12,7 @@ export default function Home(): JSX.Element {
           <Quotes/>
           <div className="content">
             <div className="content__buttons">
-              <Link to='/pretexting' className="btn">Understanding Pretexting</Link>
+              <a href='https://phishingquiz.withgoogle.com/' target="blank" rel="noreferrer" className="btn">Understanding Pretexting</a>
               <Link to='/experience-bank' className="btn">Experience bank</Link>  
             </div>
             <Link to='#' className="btn">Take Phishing Assessment</Link>

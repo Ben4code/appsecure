@@ -2,7 +2,7 @@
   "name": "chimdi",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Ben4code.github.io/appsecure",
+  "homepage": "http://Ben4code.github.io",
   "dependencies": {
     "@firebase/app": "0.0.900-exp.1003b8d91",
     "@testing-library/jest-dom": "^5.11.4",

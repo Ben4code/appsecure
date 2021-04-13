@@ -17,7 +17,6 @@ export default function Sidebar() {
           payload: newsRespose.articles
         })
       }
-      console.log(newsRespose)
     }
     getNews();
     

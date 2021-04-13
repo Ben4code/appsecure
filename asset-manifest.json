@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Ben4code/appsecure.git/static/css/main.bc7f8ffa.chunk.css",
-    "main.js": "/Ben4code/appsecure.git/static/js/main.d29ef2d7.chunk.js",
-    "main.js.map": "/Ben4code/appsecure.git/static/js/main.d29ef2d7.chunk.js.map",
-    "runtime-main.js": "/Ben4code/appsecure.git/static/js/runtime-main.8463d54e.js",
-    "runtime-main.js.map": "/Ben4code/appsecure.git/static/js/runtime-main.8463d54e.js.map",
-    "static/css/2.3f6a4e7d.chunk.css": "/Ben4code/appsecure.git/static/css/2.3f6a4e7d.chunk.css",
-    "static/js/2.707d5cba.chunk.js": "/Ben4code/appsecure.git/static/js/2.707d5cba.chunk.js",
-    "static/js/2.707d5cba.chunk.js.map": "/Ben4code/appsecure.git/static/js/2.707d5cba.chunk.js.map",
-    "index.html": "/Ben4code/appsecure.git/index.html",
-    "static/css/2.3f6a4e7d.chunk.css.map": "/Ben4code/appsecure.git/static/css/2.3f6a4e7d.chunk.css.map",
-    "static/css/main.bc7f8ffa.chunk.css.map": "/Ben4code/appsecure.git/static/css/main.bc7f8ffa.chunk.css.map",
-    "static/js/2.707d5cba.chunk.js.LICENSE.txt": "/Ben4code/appsecure.git/static/js/2.707d5cba.chunk.js.LICENSE.txt"
+    "main.css": "/appsecure/static/css/main.bc7f8ffa.chunk.css",
+    "main.js": "/appsecure/static/js/main.d29ef2d7.chunk.js",
+    "main.js.map": "/appsecure/static/js/main.d29ef2d7.chunk.js.map",
+    "runtime-main.js": "/appsecure/static/js/runtime-main.082d6440.js",
+    "runtime-main.js.map": "/appsecure/static/js/runtime-main.082d6440.js.map",
+    "static/css/2.3f6a4e7d.chunk.css": "/appsecure/static/css/2.3f6a4e7d.chunk.css",
+    "static/js/2.4e53dec5.chunk.js": "/appsecure/static/js/2.4e53dec5.chunk.js",
+    "static/js/2.4e53dec5.chunk.js.map": "/appsecure/static/js/2.4e53dec5.chunk.js.map",
+    "index.html": "/appsecure/index.html",
+    "static/css/2.3f6a4e7d.chunk.css.map": "/appsecure/static/css/2.3f6a4e7d.chunk.css.map",
+    "static/css/main.bc7f8ffa.chunk.css.map": "/appsecure/static/css/main.bc7f8ffa.chunk.css.map",
+    "static/js/2.4e53dec5.chunk.js.LICENSE.txt": "/appsecure/static/js/2.4e53dec5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.8463d54e.js",
+    "static/js/runtime-main.082d6440.js",
     "static/css/2.3f6a4e7d.chunk.css",
-    "static/js/2.707d5cba.chunk.js",
+    "static/js/2.4e53dec5.chunk.js",
     "static/css/main.bc7f8ffa.chunk.css",
     "static/js/main.d29ef2d7.chunk.js"
   ]
